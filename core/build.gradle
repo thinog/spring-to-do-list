@@ -1,22 +1,11 @@
-plugins {
-    id 'org.springframework.boot' version '2.5.2'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-    id 'java'
-}
-
-group = 'br.com.todolist'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '16'
-
-repositories {
-    mavenCentral()
+springBoot {
+    buildInfo()
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
 }
 
-test {
-    useJUnitPlatform()
+task wrapper(type: Wrapper) {
+    gradleVersion = '7.1.1'
 }
