@@ -17,12 +17,12 @@ public class ToDoListController {
         };
     }
 
-    @PostMapping()
+    @PostMapping
     public ApiResponse<Boolean> createItem(@RequestBody ItemInputDto item) {
         return null;
     }
 
-    @GetMapping()
+    @GetMapping
     public ApiResponse<List<ToDoItemDto>> getToDoList(
         @RequestParam(value = "active", required = false, defaultValue = "true") Boolean active,
         @RequestParam(value = "completed", required = false, defaultValue = "false") Boolean completed

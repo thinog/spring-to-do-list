@@ -1,14 +1,10 @@
 buildscript {
     repositories {
         mavenCentral()
-        maven {
-            url 'https://plugins.gradle.org/m2/'
-        }
     }
 
     dependencies {
         classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.5.2'
-        classpath 'io.freefair.gradle:lombok-plugin:6.1.0-m3'
     }
 }
 
@@ -16,7 +12,6 @@ allprojects {
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
     apply plugin: 'java'
-    apply plugin: 'io.freefair.lombok'
 
     group = 'br.com.todolist'
     sourceCompatibility = '16'
@@ -27,6 +22,8 @@ allprojects {
 
     dependencies {
         implementation 'org.springframework.boot:spring-boot-starter'
+        implementation 'org.projectlombok:lombok:1.18.18'
+
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
     }
 
